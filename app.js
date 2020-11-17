@@ -10,13 +10,17 @@ const { argv } = require('yargs').options({
 
 const city = argv.ciudad;
 const temperatura = clima.getClima(city);
+// console.log(typeof temperatura);
+// console.log(temperatura);
 temperatura
   .then((result) => {
-    console.log(`La temperatura en ${city} es: ${result}`);
+    console.log(result);
+    console.log(`La temp es ${result}`);
   })
   .catch((err) => {
-    console.log(err);
+    console.log(`Hola ${err}`);
   });
+
 // Tarea
 // 1.Modifical el codigo para obtener un error coherente
 // 2.-Cambiar para que me muestre en C
