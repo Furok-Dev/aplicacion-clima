@@ -1,4 +1,4 @@
-const clima = require('./controller/clima');
+const { getClime } = require('./controller/clima');
 // eslint-disable-next-line import/order
 const { argv } = require('yargs').options({
   ciudad: {
@@ -9,17 +9,9 @@ const { argv } = require('yargs').options({
 });
 
 const city = argv.ciudad;
-const temperatura = clima.getClima(city);
-// console.log(typeof temperatura);
-// console.log(temperatura);
-temperatura
-  .then((result) => {
-    console.log(result);
-    console.log(`La temp es ${result}`);
-  })
-  .catch((err) => {
-    console.log(`Hola ${err}`);
-  });
+console.log(`Buscando temperatura para la ciudad: ${city}`);
+console.log(`Buscando...`);
+getClime(city);
 
 // Tarea
 // 1.Modifical el codigo para obtener un error coherente
