@@ -1,4 +1,6 @@
 const { getClime } = require('./controller/clima');
+const colorsConf = require('./utils/colorsconf.js');
+
 // eslint-disable-next-line import/order
 const { argv } = require('yargs').options({
   ciudad: {
@@ -9,8 +11,8 @@ const { argv } = require('yargs').options({
 });
 
 const city = argv.ciudad;
-console.log(`Buscando temperatura para la ciudad: ${city}`);
-console.log(`Buscando...`);
+console.log(`Buscando temperatura para la ciudad: ${city}`.info);
+console.log(`Buscando...`.warn);
 getClime(city);
 
 // Tarea
