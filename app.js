@@ -14,10 +14,3 @@ const city = argv.ciudad;
 console.log(`Buscando temperatura para la ciudad: ${city}`.info);
 console.log(`Buscando...`.warn);
 getClime(city);
-
-// Tarea
-// 1.Modifical el codigo para obtener un error coherente
-// 2.-Cambiar para que me muestre en C
-// 3.-Mostrar los datos del clima y actualizar colores
-//      3.-Si esta nublado un color, soleado otro color y asi
-// Subir el codigo a GitHub
